@@ -1,31 +1,23 @@
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-		
-	<h2></h2>
+<table border="1">
 
+<tr style="background-color: lightblue;">
+<th>Nomor</th>
+<th>Name</th>
+<th>Kelas</th>
+</tr>
 
-        <form>
-		<table border="1" cellspacing="0">
-			<tr>
-				<th>No</th>
-				<th>Nama</th>
-				<th>Kelas</th>
-			</tr>
+<?php
+for ($i= 1; $i <= 10; $i++) {
+if ($i % 2 == 0) {
+echo "<tr>";
+} else {
+echo "<tr style='background-color: lightgrey;'>";
+}
+echo "<td>" . $i ."</td>";
+echo "<td>" . "Nama ke-" . $i."</td>";
+echo "<td>" . "Kelas". (10 - $i + 1) . "</td>";
+echo "</tr>";
+}
+?>
 
-                        <?php  for ($no = 1, $i=1, $a=10; $i<=10, $a>=1  ; $i++, $a--) { ?>
-
-			<tr>
-				<td> <?php echo $no; ?></td>
-				<td><?php echo "nama ke $i"; ?></td>
-				<td><?php echo "kelas $a"; ?></td>
-			</tr>
-
-		<?php $no++; } ?>
-
-		</table>
-	</form>
-</body>
-</html>
+</table>
